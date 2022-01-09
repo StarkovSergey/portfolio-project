@@ -1,0 +1,69 @@
+.skills {
+  margin-bottom: 10px;
+}
+
+.skills__list {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  list-style: none;
+
+  @media (max-width: $laptop-width) {
+    grid-template-columns: repeat(2, auto);
+    row-gap: 36px;
+    column-gap: 44px;
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: auto;
+  }
+}
+
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  width: 320px;
+  min-height: 230px;
+  padding: 0 20px;
+  background-repeat: no-repeat;
+  background-position: center 0;
+
+  &--photography {
+    background-image: url("../img/skills/camera.svg");
+  }
+
+  &--video {
+    background-image: url("../img/skills/video.svg");
+  }
+
+  &--retouch {
+    background-image: url("../img/skills/image.svg");
+  }
+
+  &--audio {
+    background-image: url("../img/skills/mic.svg");
+  }
+
+  @media (max-width: $laptop-width) {
+    min-height: 224px;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    padding-left: 10px;
+  }
+}
+
+.skills__heading {
+  margin: 0;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 40px;
+}
+
+.skills__text {
+  // section__text
+}

@@ -1,0 +1,44 @@
+.price {
+  margin-bottom: 100px;
+}
+
+.price__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.price__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 450px;
+  padding: 43px 0;
+  border: 2px solid var(--special);
+}
+
+.price__tariff-name {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-family: "Merriweather", serif;
+  font-size: 28px;
+  line-height: 56px;
+}
+
+.price__price {
+  margin-bottom: 20px;
+  color: var(--special);
+  font-family: "Merriweather", serif;
+  font-size: 24px;
+  line-height: 48px;
+}
+
+.price__text {
+  margin-bottom: 40px;
+  text-align: center;
+}
