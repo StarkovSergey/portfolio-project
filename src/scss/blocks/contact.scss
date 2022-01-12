@@ -5,10 +5,18 @@
   background-repeat: no-repeat;
   background-position: center 0;
   background-size: 1440px;
+
+  @media (max-width: $tablet-width) {
+    min-height: auto;
+    padding-top: 52px;
+    padding-bottom: 111px;
+    background-image: url("../img/contacts/contacts-tablet.jpg");
+    background-size: cover;
+  }
 }
 
 .contact__column {
-  width: 450px;
+  max-width: 450px;
   margin-left: auto;
 
   @media (max-width: $tablet-width) {
@@ -17,14 +25,18 @@
 }
 
 .contact__title {
-  margin: 0;
-  margin-bottom: 40px;
-  color: var(--special);
-  font-weight: 700;
-  font-family: "Merriweather", serif;
-  font-style: normal;
-  font-size: 40px;
-  line-height: 80px;
+  justify-content: start;
+  width: 100%;
+
+  @media (max-width: $tablet-width) {
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+
+  &::before,
+  &::after {
+    display: none;
+  }
 }
 
 .contact__form {

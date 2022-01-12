@@ -1,3 +1,10 @@
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
 .header {
   position: absolute;
   width: 100%;
@@ -30,6 +37,7 @@
     position: absolute;
     top: 0;
     right: -620px;
+    z-index: 2;
     flex-direction: column;
     width: 100%;
     max-width: 620px;

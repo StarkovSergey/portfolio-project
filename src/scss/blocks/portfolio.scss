@@ -39,6 +39,10 @@
   @media (max-width: $laptop-width) {
     grid-template-columns: repeat(2, auto);
   }
+
+  @media (max-width: 580px) {
+    margin-bottom: 30px;
+  }
 }
 
 .buttons-list__item {
@@ -55,5 +59,9 @@
 
   @media (max-width: 580px) {
     width: 150px;
+  }
+
+  @media (max-width: 360px) {
+    width: 120px;
   }
 }

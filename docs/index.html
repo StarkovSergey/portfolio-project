@@ -11,42 +11,44 @@
   </head>
 
 <body class="page__body">
+  <div class="wrapper">
   <header class="header">
-  <div class="container header__container">
-    <a href="index.html" class="logo">
-      <svg width="50" height="50" aria-label="To the main page">
-        <use xlink:href="img/icons/sprite.svg#logo"></use>
-      </svg>
-    </a>
-    <nav class="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#skills" class="nav__link">Skills</a>
-        </li>
-        <li class="nav__item">
-          <a href="#portfolio" class="nav__link">Portfolio</a>
-        </li>
-        <li class="nav__item">
-          <a href="#video" class="nav__link">Video</a>
-        </li>
-        <li class="nav__item">
-          <a href="#price" class="nav__link">Price</a>
-        </li>
-        <li class="nav__item">
-          <a href="#contacts" class="nav__link">Contacts</a>
-        </li>
-      </ul>
-      <div class="lang-switcher">
-        <button class="lang-switcher__button  lang-switcher__button--active" type="button">en</button> /
-        <button class="lang-switcher__button" type="button">ru</button>
-      </div>
-      <button class="nav__toggle" type="button">
-        <span class="nav__toggle-line"></span>
-        <span class="visually-hidden">Show menu</span>
-      </button>
-    </nav>
-  </div>
-</header>
+    <div class="container header__container">
+      <a href="index.html" class="logo">
+        <svg width="50" height="50" aria-label="To the main page">
+          <use xlink:href="img/icons/sprite.svg#logo"></use>
+        </svg>
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#portfolio" class="nav__link">Portfolio</a>
+          </li>
+          <li class="nav__item">
+            <a href="#video" class="nav__link">Video</a>
+          </li>
+          <li class="nav__item">
+            <a href="#price" class="nav__link">Price</a>
+          </li>
+          <li class="nav__item">
+            <a href="#contacts" class="nav__link">Contacts</a>
+          </li>
+        </ul>
+        <div class="lang-switcher">
+          <button class="lang-switcher__button  lang-switcher__button--active" type="button">en</button> /
+          <button class="lang-switcher__button" type="button">ru</button>
+        </div>
+        <button class="nav__toggle" type="button">
+          <span class="nav__toggle-line"></span>
+          <span class="visually-hidden">Show menu</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+</div>
 
   <main class="main">
     <section class="hero  section">
@@ -54,12 +56,12 @@
         <div class="hero__column">
           <h1 class="hero__title">Alexa Rise</h1>
           <p class="hero__text">Save sincere emotions, romantic feelings and happy moments of life together with professional photographer Alexa Rise</p>
-          <button class="button">Hire me</button>
+          <button class="hero__button button">Hire me</button>
         </div>
       </div>
     </section>
 
-    <section class="skills  section" id="skills" style="display: none;">
+    <section class="skills  section" id="skills">
       <div class="container">
         <h2 class="section__title">Skills</h2>
         <ul class="skills__list">
@@ -83,7 +85,7 @@
       </div>
     </section>
 
-    <section class="portfolio  section" id="portfolio" style="display: none;">
+    <section class="portfolio  section" id="portfolio">
       <div class="container">
         <h2 class="section__title">Portfolio</h2>
         <ol class="portfolio__buttons-list  buttons-list">
@@ -125,17 +127,20 @@
 
     </section>
 
-    <section class="section video" id="video" style="display: none;">
+    <section class="section video" id="video">
       <div class="video__container container">
         <h2 class="section__title">Video</h2>
         <div class="video__box">
-          <img src="img/video/video-player.jpg" alt="blank for video" width="1400" height="705">
+          <picture>
+            <source media="(max-width: 768px)" srcset="img/video/video-player-tablet.jpg">
+            <img src="img/video/video-player.jpg" alt="blank for video" width="1400" height="705">
+          </picture>
           <button class="video__button" type="button"><span class="visually-hidden">Play</span></button>
         </div>
       </div>
     </section>
 
-    <section class="section price" id="price" style="display: none;">
+    <section class="section price" id="price">
       <div class="container">
         <h2 class="section__title">Price</h2>
         <ul class="price__list">
@@ -167,10 +172,10 @@
       </div>
     </section>
 
-    <section class="contact  section" id="contacts" style="display: none;">
+    <section class="contact  section" id="contacts">
       <div class="container">
         <div class="contact__column">
-          <h2 class="contact__title">Contact me</h2>
+          <h2 class="contact__title  section__title">Contact me</h2>
           <form class="contact__form" action="#">
             <input class="contact__input" type="email" placeholder="E-mail">
             <input class="contact__input" type="tel" placeholder="Phone">

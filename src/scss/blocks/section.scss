@@ -1,5 +1,13 @@
 .section {
   padding-top: 100px;
+
+  @media (max-width: $tablet-width) {
+    padding-top: 80px;
+  }
+
+  @media (max-width: 500px) {
+    padding-top: 50px;
+  }
 }
 
 .section__title {
@@ -34,8 +42,18 @@
 
   @media (max-width: $tablet-width) {
     width: 364px;
+    margin-bottom: 50px;
     font-size: 32px;
-    line-height: 40px;
+  }
+
+  @media (max-width: 580px) {
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: 430px) {
+    width: 100%;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 
@@ -46,11 +64,11 @@
 
   @media (max-width: $laptop-width) {
     font-size: 18px;
-    line-height: 22px;
+    line-height: 36px;
   }
 
   @media (max-width: 550px) {
     font-size: 16px;
-    line-height: 21px;
+    line-height: 28px;
   }
 }
