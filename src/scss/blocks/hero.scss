@@ -16,6 +16,7 @@
 }
 
 .hero__container {
+  position: relative;
   display: flex;
   min-height: 910px;
   padding-bottom: 80px;
@@ -81,4 +82,27 @@
 .hero__button {
   position: relative;
   z-index: 0;
+}
+
+.hero__theme-button {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    transition: fill 200ms ease 0s;
+    fill: var(--basic-white);
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill: var(--special);
+    }
+  }
 }
