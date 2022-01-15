@@ -14,11 +14,11 @@
 
   &:hover,
   &:focus {
-    color: var(--special);
+    color: var(--special-to-white);
   }
   transition: color 200ms ease 0s;
 }
 
 .lang-switcher__button--active {
-  color: var(--special);
+  color: var(--special-to-white);
 }

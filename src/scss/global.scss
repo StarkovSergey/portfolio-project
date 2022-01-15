@@ -73,20 +73,20 @@ button {
 .button {
   display: block;
   width: 220px;
-  padding: 7px;
-  border: 2px solid var(--special);
-  color: var(--basic-black);
+  padding: 9px;
+  color: var(--basic-black-const);
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
   text-align: center;
   background-color: var(--special);
   cursor: pointer;
-  transition: color 200ms ease 0s;
+  transition: color 200ms ease 0s, background-color 200ms ease 0s, border-color 200ms ease 0s;
 
   &:hover,
   &:focus {
-    color: var(--basic-white);
+    color: var(--basic-white-to-special);
+    background-color: var(--basic-black-const);
   }
 
   @media (max-width: 550px) {
@@ -94,7 +94,6 @@ button {
     font-size: 18px;
     line-height: 30px;
   }
-
 
   @media (max-width: 360px) {
     font-size: 16px;

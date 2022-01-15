@@ -4,7 +4,7 @@
   background-image: url("../img/contacts/contacts.jpg");
   background-repeat: no-repeat;
   background-position: center 0;
-  background-size: 1440px;
+  background-size: cover;
 
   @media (max-width: $tablet-width) {
     min-height: auto;
@@ -12,6 +12,14 @@
     padding-bottom: 111px;
     background-image: url("../img/contacts/contacts-tablet.jpg");
     background-size: cover;
+  }
+}
+
+.page--light-theme .contact {
+  background-image: url("../img/contacts/contacts-light.jpg");
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/contacts/contacts-tablet-light.jpg");
   }
 }
 
@@ -47,14 +55,14 @@
   margin-bottom: 20px;
   padding: 0 20px;
   border: 2px solid var(--special);
-  color: var(--special);
+  color: var(--special-to-black);
   font-family: "Inter", sans-serif;
   font-size: 20px;
   line-height: 46px;
   background-color: var(--basic-black-a50);
 
   &::placeholder {
-    color: var(--special);
+    color: var(--special-to-black);
   }
 
   &--textarea {
@@ -63,6 +71,14 @@
 }
 
 .contact__button {
+  border-color: var(--special-to-white);
+  background-color: var(--special-to-white);
+
+  &:hover,
+  &:focus {
+    border-color: var(--special-to-black);
+  }
+
   @media (max-width: $tablet-width) {
     margin: 0 auto;
   }

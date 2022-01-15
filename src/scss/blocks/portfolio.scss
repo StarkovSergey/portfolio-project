@@ -49,12 +49,14 @@
 }
 
 .buttons-list__button {
-  color: var(--special);
-  background-color: transparent;
+  color: var(--special-to-black);
+  background-color: var(--basic-black-to-special);
 
   &--active {
-    color: var(--basic-black);
-    background-color: var(--special);
+    padding: 7px;
+    border: 2px solid var(--special);
+    color: var(--basic-black-to-special);
+    background-color: var(--special-to-black);
   }
 
   @media (max-width: 580px) {
