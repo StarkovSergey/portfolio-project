@@ -174,7 +174,7 @@
         <div class="video__container container">
           <h2 class="section__title" data-i18n="video">Video</h2>
           <div class="video__box">
-            <picture>
+            <!-- <picture>
               <source
                 media="(max-width: 768px)"
                 srcset="img/video/video-player-tablet.jpg"
@@ -185,7 +185,14 @@
                 width="1400"
                 height="705"
               />
-            </picture>
+            </picture> -->
+
+            <video class="media">
+              <source src="files/autumn.mp4" type="video/mp4" controls>
+              <p>
+                HTML5 Video is not supported.
+              </p>
+            </video>
             <button class="video__button" type="button">
               <span class="visually-hidden">Play</span>
             </button>

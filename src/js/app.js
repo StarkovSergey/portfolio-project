@@ -4,6 +4,7 @@ import './modules/translate.js';
 import './modules/theme-switcher.js';
 import './modules/ripple-button.js';
 import './modules/contact.js';
+import './modules/video.js';
 
 console.log(` Total score: 75 / 75
   [x] Смена изображений в секции portfolio +25
