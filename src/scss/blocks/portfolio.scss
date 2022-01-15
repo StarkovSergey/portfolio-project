@@ -49,11 +49,12 @@
 }
 
 .buttons-list__button {
+  padding: 7px;
+  border: 2px solid var(--special);
   color: var(--special-to-black);
   background-color: var(--basic-black-to-special);
 
   &--active {
-    padding: 7px;
     border: 2px solid var(--special);
     color: var(--basic-black-to-special);
     background-color: var(--special-to-black);

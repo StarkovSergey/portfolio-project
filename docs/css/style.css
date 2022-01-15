@@ -124,9 +124,11 @@ button {
 }
 
 .button {
+  position: relative;
   display: block;
   width: 220px;
   padding: 9px;
+  overflow: hidden;
   color: var(--basic-black-const);
   font-family: inherit;
   font-size: 20px;
@@ -138,7 +140,7 @@ button {
 }
 .button:hover, .button:focus {
   color: var(--basic-white-to-special);
-  background-color: var(--basic-black-const);
+  background-color: var(--special-to-black);
 }
 @media (max-width: 550px) {
   .button {
@@ -154,6 +156,33 @@ button {
   }
 }
 
+.button .circle {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  transform: translate(-50%, -50%) scale(0);
+  -webkit-animation: scale 0.5s ease-out;
+          animation: scale 0.5s ease-out;
+}
+
+@-webkit-keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes scale {
+  to {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+/* ------------------------------------*|
+  #icons
+/*------------------------------------ */
 .icon {
   transition: fill 200ms;
   fill: var(--basic-white);
@@ -407,6 +436,7 @@ button {
 
 .lang-switcher__button--active {
   color: var(--special-to-white);
+  cursor: auto;
 }
 
 .hero {
@@ -701,11 +731,12 @@ button {
 }
 
 .buttons-list__button {
+  padding: 7px;
+  border: 2px solid var(--special);
   color: var(--special-to-black);
   background-color: var(--basic-black-to-special);
 }
 .buttons-list__button--active {
-  padding: 7px;
   border: 2px solid var(--special);
   color: var(--basic-black-to-special);
   background-color: var(--special-to-black);
