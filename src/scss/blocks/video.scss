@@ -10,6 +10,7 @@
 .video__box {
   position: relative;
   display: flex;
+  flex-direction: column;
   max-width: 1400px;
 
   @media (max-width: $tablet-width) {
@@ -53,4 +54,91 @@
     width: 65px;
     height: 65px;
   }
+}
+
+.video__controls {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.video__play {
+  height: 30px;
+
+  svg {
+    width: 23px;
+    height: 30px;
+    transition: fill 200ms ease 0s;
+    fill: var(--basic-white);
+
+    &:hover,
+    &:focus {
+      fill: var(--special);
+    }
+  }
+}
+
+.video__progress {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+input[type="range"] {
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--basic-white);
+  cursor: pointer;
+  appearance: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--basic-white);
+  box-shadow: 0 0 4px rgb(0 0 0 / 35%);
+  cursor: pointer;
+  appearance: none;
+}
+
+.video__timeline {
+  background-image: linear-gradient(yellow, green);
+}
+
+.video__duration {
+  width: auto;
+  margin-right: 10px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.video__sound {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: min-content;
+}
+
+.video__mute {
+  display: block;
+  height: 30px;
+
+  svg {
+    width: 38px;
+    height: 30px;
+    transition: fill 200ms ease 0s;
+    fill: var(--basic-white);
+
+    &:hover,
+    &:focus {
+      fill: var(--special);
+    }
+  }
+}
+
+.video__volume {
 }

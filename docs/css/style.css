@@ -38,7 +38,7 @@
 :root.page--light-theme {
   --basic-white: #1c1c1c;
   --basic-black: #ffffff;
-  --basic-black-a50: rgba(255, 255, 255, 0.5);
+  --basic-black-a50: rgb(255 255 255 / 50%);
   --basic-white-to-special: #bdae82;
   --special-to-white: #ffffff;
   --special-to-black: #1c1c1c;
@@ -85,11 +85,14 @@ img {
 }
 
 button {
+  padding: 0;
   border: none;
   /* в норме есть обводка */
   font: inherit;
   /* в норме monospace */
   font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -761,6 +764,7 @@ button {
 .video__box {
   position: relative;
   display: flex;
+  flex-direction: column;
   max-width: 1400px;
 }
 @media (max-width: 768px) {
@@ -802,6 +806,90 @@ button {
     width: 65px;
     height: 65px;
   }
+}
+
+.video__controls {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.video__play {
+  height: 30px;
+}
+.video__play svg {
+  width: 23px;
+  height: 30px;
+  transition: fill 200ms ease 0s;
+  fill: var(--basic-white);
+}
+.video__play svg:hover, .video__play svg:focus {
+  fill: var(--special);
+}
+
+.video__progress {
+  flex-grow: 1;
+  padding: 0 10px;
+}
+
+input[type=range] {
+  display: block;
+  width: 100%;
+  height: 8px;
+  border-radius: 3px;
+  background: var(--basic-white);
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--basic-white);
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.video__timeline {
+  background-image: linear-gradient(yellow, green);
+}
+
+.video__duration {
+  width: auto;
+  margin-right: 10px;
+}
+@media (max-width: 768px) {
+  .video__duration {
+    display: none;
+  }
+}
+
+.video__sound {
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+}
+
+.video__mute {
+  display: block;
+  height: 30px;
+}
+.video__mute svg {
+  width: 38px;
+  height: 30px;
+  transition: fill 200ms ease 0s;
+  fill: var(--basic-white);
+}
+.video__mute svg:hover, .video__mute svg:focus {
+  fill: var(--special);
 }
 
 .price {
@@ -955,6 +1043,7 @@ button {
 }
 .contact__input--textarea {
   height: 100px;
+  resize: vertical;
 }
 
 .contact__button {

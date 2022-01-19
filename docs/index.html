@@ -217,29 +217,40 @@
       <section class="section video" id="video">
         <div class="video__container container">
           <h2 class="section__title" data-i18n="video">Video</h2>
-          <div class="video__box">
-            <!-- <picture>
-              <source
-                media="(max-width: 768px)"
-                srcset="img/video/video-player-tablet.jpg"
-              />
-              <img
-                src="img/video/video-player.jpg"
-                alt="blank for video"
-                width="1400"
-                height="705"
-              />
-            </picture> -->
+          <div class="video__player">
+            <div class="video__box">
+              <video class="media">
+                <source src="files/file-storage-custom-video/video/video.mp4" type="video/mp4">
+                <p>
+                  HTML5 Video is not supported.
+                </p>
+              </video>
+              <button class="video__button" type="button">
+                <span class="visually-hidden">Play</span>
+              </button>
+            </div>
 
-            <video class="media">
-              <source src="files/autumn.mp4" type="video/mp4" controls>
-              <p>
-                HTML5 Video is not supported.
-              </p>
-            </video>
-            <button class="video__button" type="button">
-              <span class="visually-hidden">Play</span>
-            </button>
+              <div class="video__controls">
+                <button class="video__play" aria-label="Play Pause Icon">
+                  <svg width="22px" height="30px">
+                    <use xlink:href="img/icons/sprite.svg#play"></use>
+                  </svg>
+                </button>
+                <div class="video__progress">
+                  <input type="range" class="video__timeline" min="0" max="1000" value="0" style="background-image: linear-gradient(to right, var(--special) 0%, var(--basic-white) 0%)">
+                </div>
+                <span class="video__duration"></span>
+
+                <div class="video__sound">
+                  <button class="video__mute" aria-label="Mute button">
+                    <svg width="38px" height="30">
+                      <use xlink:href="img/icons/sprite.svg#volume"></use>
+                    </svg>
+                  </button>
+                  <input type="range" class="video__volume" min="0" max="100" value="100" style="background-image: linear-gradient(to right, var(--special) 100%, var(--basic-white) 100%)">
+                </div>
+              </div>
+
           </div>
         </div>
       </section>

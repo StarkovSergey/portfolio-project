@@ -37,9 +37,12 @@ img {
 // Можно сделать дополнительный сброс для кнопок
 
 button {
+  padding: 0;
   border: none; /* в норме есть обводка */
   font: inherit; /* в норме monospace */
   font-size: 20px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .visually-hidden {
