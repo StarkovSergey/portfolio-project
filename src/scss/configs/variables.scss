@@ -13,7 +13,7 @@
 :root.page--light-theme {
   --basic-white: #1c1c1c;
   --basic-black: #ffffff;
-  --basic-black-a50: rgba(255, 255, 255, 0.5);
+  --basic-black-a50: rgb(255 255 255 / 50%);
   --basic-white-to-special: #bdae82;
   --special-to-white: #ffffff;
   --special-to-black: #1c1c1c;
