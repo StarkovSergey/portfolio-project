@@ -84,7 +84,6 @@ media.addEventListener('durationchange', setInitialDuration);
 
 volume.addEventListener('input', setVolume);
 volumeToggle.addEventListener('click', toggleVolume);
-
 const initPictureInPicture = () => {
   pip.addEventListener('click', () => {
     if (!document.pictureInPictureElement) {
