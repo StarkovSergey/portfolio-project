@@ -6,6 +6,7 @@ const playButtonIcon = playButton.querySelector('use');
 const durationElement = document.querySelector('.video__duration');
 const volume = document.querySelector('.video__volume');
 const volumeToggle = document.querySelector('.video__mute');
+const pip = document.querySelector('.video__pip');
 
 let totalDuration;
 
@@ -83,3 +84,17 @@ media.addEventListener('durationchange', setInitialDuration);
 
 volume.addEventListener('input', setVolume);
 volumeToggle.addEventListener('click', toggleVolume);
+
+const initPictureInPicture = () => {
+  pip.addEventListener('click', () => {
+    if (!document.pictureInPictureElement) {
+      media.requestPictureInPicture();
+    } else {
+      document.exitPictureInPicture();
+    }
+  });
+};
+
+if ('pictureInPictureEnabled' in document) {
+  initPictureInPicture();
+}

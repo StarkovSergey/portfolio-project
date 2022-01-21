@@ -892,6 +892,18 @@ input[type=range]::-webkit-slider-thumb {
   fill: var(--special);
 }
 
+.video__pip {
+  height: 25px;
+  margin-left: 15px;
+}
+.video__pip svg {
+  fill: var(--basic-white);
+  transition: fill 200ms ease 0s;
+}
+.video__pip svg:hover, .video__pip svg:focus {
+  fill: var(--special);
+}
+
 .price {
   margin-bottom: 100px;
 }
