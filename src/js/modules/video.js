@@ -8,6 +8,7 @@ const volume = document.querySelector('.video__volume');
 const volumeToggle = document.querySelector('.video__mute');
 const pip = document.querySelector('.video__pip');
 
+
 let totalDuration;
 
 const toggleMediaStatus = () => {
@@ -84,6 +85,7 @@ media.addEventListener('durationchange', setInitialDuration);
 
 volume.addEventListener('input', setVolume);
 volumeToggle.addEventListener('click', toggleVolume);
+
 const initPictureInPicture = () => {
   pip.addEventListener('click', () => {
     if (!document.pictureInPictureElement) {
