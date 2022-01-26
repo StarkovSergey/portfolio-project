@@ -8,7 +8,6 @@ const volume = document.querySelector('.video__volume');
 const volumeToggle = document.querySelector('.video__mute');
 const pip = document.querySelector('.video__pip');
 
-
 let totalDuration;
 
 const toggleMediaStatus = () => {
@@ -65,15 +64,17 @@ const setVolume = (e) => {
   volume.style.backgroundImage = `linear-gradient(to right, var(--special) ${position * 100}%, var(--basic-white) ${position * 100}%)`;
 };
 
+let savedVolumeValue = 1;
+
 const toggleVolume = () => {
   const isMuted = media.volume === 0;
-  console.log(media.volume);
   if (isMuted) {
     volumeToggle.querySelector('use').setAttribute('xlink:href', 'img/icons/sprite.svg#volume');
   } else {
+    savedVolumeValue = volume.value;
     volumeToggle.querySelector('use').setAttribute('xlink:href', 'img/icons/sprite.svg#mute');
   }
-  volume.value = isMuted ? 100 : 0;
+  volume.value = isMuted ? savedVolumeValue : 0;
   volume.dispatchEvent(new Event('input'));
 };
 
