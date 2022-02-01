@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
     language = localStorage.getItem('language');
     getTranslate(language);
   }
+
+  document.querySelector(`[data-lang="${language}"]`).classList.add('lang-switcher__button--active');
 });
 
 window.addEventListener('beforeunload', () => {
